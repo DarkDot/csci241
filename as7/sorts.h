@@ -24,5 +24,11 @@ inFile.close();
 }
 template <class T>
 void printList(const vector<T>& set, int itemWidth, int numPerLine){
-
+    for (int i=0; i<(int)set.size();i++)
+    {
+        if (!(i%numPerLine))
+            cout<<endl;
+        cout<<setw(itemWidth)<<set[i];
+    }
+    cout<<endl;
 }
