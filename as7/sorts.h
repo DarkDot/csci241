@@ -5,23 +5,27 @@ void buildList(vector<T>& set, const char* fileName)
 
 //The function should first open the file for input, then read items from the file using the >> operator one at a time until end of file, inserting them into the vector. Finally, it should close the input file. Here's some pseudocode for the logic:
 
-T item;
-ifstream inFile;
+    T item;
+    ifstream inFile;
 
-inFile.open(fileName);
-if (!inFile){
-cout << endl << "File "<<inFile<<" not found"<<endl;
-exit(1);                //running away now!
-}
-inFile>>item;
+    inFile.open(fileName);
+    if (!inFile)
+    {
+        cout << endl << "File "<<inFile<<" not found"<<endl;
+        exit(1);                //running away now!
+    }
+    
+    inFile>>item;
 
-while (inFile)
-{
-set.push_back(item);
-inFile>>item;
+    while (inFile)
+    {
+        set.push_back(item);
+        inFile>>item;
+    }
+    
+    inFile.close();
 }
-inFile.close();
-}
+
 template <class T>
 void printList(const vector<T>& set, int itemWidth, int numPerLine){
     for (int i=0; i<(int)set.size();i++)
@@ -31,4 +35,16 @@ void printList(const vector<T>& set, int itemWidth, int numPerLine){
         cout<<setw(itemWidth)<<set[i];
     }
     cout<<endl;
+}
+
+template <class T>
+bool lessThan(const T& item1, const T& item2)
+{
+    return (item1 < item2);
+}
+
+template <class T>
+bool greaterThan(const T& item1, const T& item2)
+{
+    reuturn (item1 > item2);
 }
