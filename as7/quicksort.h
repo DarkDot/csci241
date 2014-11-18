@@ -1,4 +1,8 @@
 #include <utility>      // std::swap
+#include <vector>
+#include "sorts.h"
+using std::vector;
+using std::swap;
 
 
 template <class T>
