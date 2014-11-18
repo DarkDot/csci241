@@ -1,3 +1,14 @@
+#include <vector>       //std::vector
+#include <fstream>      //std::ifstream
+#include <iostream>     //std::cout std::endl
+#include <iomanip>      //std::setw
+#include "sorts.h"
+using std::vector;
+using std::ifstream;
+using std::setw;
+using std::endl;
+
+
 template <class T>
 void buildList(vector<T>& set, const char* fileName)
 {
