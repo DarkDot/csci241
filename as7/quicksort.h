@@ -1,5 +1,7 @@
+#ifndef QUICKSORT_H
+#define QUICKSORT_H
 #include <utility>      // std::swap
-#include <vector>
+#include <vector>       //std::vector
 #include "sorts.h"
 using std::vector;
 using std::swap;

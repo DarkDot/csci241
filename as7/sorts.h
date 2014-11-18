@@ -1,8 +1,9 @@
+#ifndef SORTS_H
+#define SORTS_H
 #include <vector>       //std::vector
 #include <fstream>      //std::ifstream
 #include <iostream>     //std::cout std::endl
 #include <iomanip>      //std::setw
-#include "sorts.h"
 using std::vector;
 using std::ifstream;
 using std::setw;
@@ -59,3 +60,5 @@ bool greaterThan(const T& item1, const T& item2)
 {
     reuturn (item1 > item2);
 }
+
+#endif
